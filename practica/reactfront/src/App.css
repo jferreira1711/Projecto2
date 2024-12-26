@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  font-size: 18px;   
+  background: #d9edff !important;
+}
+
+
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;  /*para a la siguiente fila cuando no hay espacio */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ 
+}
+
+
