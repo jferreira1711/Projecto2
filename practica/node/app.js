@@ -14,9 +14,24 @@ import AppointmentsRouter from './routes/AppointmentsRouter.js'
 import PrescriptionsRouter from './routes/PrescriptionRouter.js'
 
 const app = express()
+const port = process.env.PORT || 8001;
 
+// Configuración de CORS
+const allowedOrigins = [
+    'https://frontend-chp4.vercel.app',  // Dominio configurado en las variables de entorno
+    'http://localhost:3000', // Para desarrollo local
+];
 
-app.use(cors())
+app.use(cors({
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true, // Permitir credenciales
+}));
 app.use(express.json())
 app.use('/usuarios',UsuariosRouter)
 app.use('/patients',PatientsRouter)
@@ -33,10 +48,10 @@ try {
 }
 
 app.get('/', (req, res)=>{
-    res.send('HOLA MUNDO')
+    res.send('HOLA MUNDO 2.0')
 })
 
-app.listen(8000, ()=>{
-    console.log('Server UP running in http://localhost:8000/')
+app.listen(port, ()=>{
+    console.log('Server UP running in http://localhost:8001/')
     
 })

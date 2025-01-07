@@ -7,7 +7,7 @@ import { Clock , Calendar, Clipboard, User, Check } from "lucide-react";
 import { useWallet } from "../../../WalletProvider.js";
 import { ethers } from "ethers";
 
-const URI = 'http://localhost:8000/appointments/'
+const URI = 'https://backend-kpx0.onrender.com/appointments/'
 
 const UpdateAppointment = () => {
     const { id } = useParams(); // Extract the id parameter from the URL

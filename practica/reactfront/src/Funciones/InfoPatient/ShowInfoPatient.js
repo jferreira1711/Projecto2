@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { UserRound, Phone, MapPin, Calendar, Ruler, Weight, Droplet, PersonStanding, Mail,Newspaper  } from 'lucide-react';
 
 
-const URI = 'http://localhost:8000/patients/'
+const URI = 'https://backend-kpx0.onrender.com/patients/'
 
 const UpdatePatients = () => {
     const { id } = useParams(); // Extract the id parameter from the URL

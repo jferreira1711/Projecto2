@@ -7,7 +7,7 @@ import { UserRound, Phone, MapPin, Calendar, Ruler, Weight, Droplet, PersonStand
 import { useWallet } from "../../../WalletProvider.js";
 import { ethers } from "ethers";
 
-const URI = 'http://localhost:8000/patients/'
+const URI = 'https://backend-kpx0.onrender.com/patients/'
 
 const UpdatePatients = () => {
     const { id } = useParams(); // Extract the id parameter from the URL

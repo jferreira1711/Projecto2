@@ -51,7 +51,7 @@ const AddDoctor = () => {
 
 
 
-            const response = await axios.post("http://localhost:8000/doctors/", doctorData);
+            const response = await axios.post("https://backend-kpx0.onrender.com/doctors/", doctorData);
             if (response.status === 200) {
                 alert("Doctor added successfully!");
                 setDoctorData({

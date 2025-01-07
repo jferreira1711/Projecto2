@@ -58,7 +58,7 @@ const AddPatientForm = () => {
       const tx = await contract.registerPatient(medicalRecordHash);
       await tx.wait();
 
-      const response = await axios.post("http://localhost:8000/patients", patientData);
+      const response = await axios.post("https://backend-kpx0.onrender.com/patients", patientData);
       if (response.status === 200) {
         alert("Patient added successfully!");
         setPatientData({

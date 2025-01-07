@@ -4,7 +4,7 @@ import { Calendar, Clipboard, User } from "lucide-react";
 import Sidebar from "../../Sidebar.js";
 import axios from "axios";
 
-const URI = 'http://localhost:8000/medicalreports/'
+const URI = 'https://backend-kpx0.onrender.com/medicalreports/'
 
 const ShowInfoMedicalReport = () => {
 

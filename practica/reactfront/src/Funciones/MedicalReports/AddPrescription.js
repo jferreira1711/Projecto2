@@ -8,7 +8,7 @@ import { useWallet } from "../../WalletProvider.js";
 import { ethers } from "ethers";
 
 
-const URI2 = "http://localhost:8000/appointments/";
+const URI2 = "https://backend-kpx0.onrender.com/appointments/";
 const AddPrescription = () => {
     const { id } = useParams(); // Obtener el ID del reporte de la URL
     const navigate = useNavigate();
@@ -58,7 +58,7 @@ const AddPrescription = () => {
                 return;
             }
 
-            const response = await axios.post("http://localhost:8000/prescriptions", prescriptionData);
+            const response = await axios.post("https://backend-kpx0.onrender.com/prescriptions", prescriptionData);
             if (response.status === 201) {
                 
                 setPrescriptionData({

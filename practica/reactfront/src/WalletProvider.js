@@ -230,25 +230,6 @@ const contractABI = [
 			{
 				"indexed": false,
 				"internalType": "uint256",
-				"name": "medicalPrescriptionId",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "address",
-				"name": "removedBy",
-				"type": "address"
-			}
-		],
-		"name": "MedicalPrescriptionRemoved",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "uint256",
 				"name": "medicalReportId",
 				"type": "uint256"
 			},
@@ -260,25 +241,6 @@ const contractABI = [
 			}
 		],
 		"name": "MedicalReportRegistered",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "patientId",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "address",
-				"name": "removedBy",
-				"type": "address"
-			}
-		],
-		"name": "MedicalReportRemoved",
 		"type": "event"
 	},
 	{
@@ -443,32 +405,6 @@ const contractABI = [
 			}
 		],
 		"name": "removeDoctor",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_patientId",
-				"type": "uint256"
-			}
-		],
-		"name": "removeMedicalPrescription",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_patientId",
-				"type": "uint256"
-			}
-		],
-		"name": "removeMedicalReport",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -820,7 +756,7 @@ export const WalletProvider = ({ children }) => {
 	const [doctorStaffGroup, setDoctorStaff] = useState(null);
     const [isOwner, setIsOwner] = useState(false);
 
-    const contractAddress = "0xAB56BdC596BB10fe0742c5e682CDAF5B24667bF4";
+    const contractAddress = "0x07F2eF2B030B5B2712D8206a88F09Fc5C51bC66D";
 
 
     useEffect(() => {

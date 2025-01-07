@@ -22,7 +22,7 @@ const IDAppointment = () => {
                 return;
             }
             // Llamada al backend para comprobar si el ID existe
-            const response = await axios.get(`http://localhost:8000/appointments/${iDAppointment}`);
+            const response = await axios.get(`https://backend-kpx0.onrender.com/appointments/${iDAppointment}`);
             if (response.data) {
                 // Si el paciente existe, redirige
                 navigate(`/updateAppointment/${iDAppointment}`);

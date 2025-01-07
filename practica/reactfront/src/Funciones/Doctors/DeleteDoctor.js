@@ -34,9 +34,9 @@ const DeleteDoctor = () => {
             const ownerAddress = await contract.getOwner();
             console.log("Dirección del propietario:", ownerAddress);
             
-            const response = await axios.get(`http://localhost:8000/doctors/${idDoctor}`);
+            const response = await axios.get(`https://backend-kpx0.onrender.com/doctors/${idDoctor}`);
             if (response.data) {
-                const response2 = await axios.delete(`http://localhost:8000/doctors/${idDoctor}`);
+                const response2 = await axios.delete(`https://backend-kpx0.onrender.com/doctors/${idDoctor}`);
                 if (response2.status === 200) {
                     // Llamar a la función del contrato
                     const tx = await contract.removeDoctor(idDoctor); // Usar `id` como número simple

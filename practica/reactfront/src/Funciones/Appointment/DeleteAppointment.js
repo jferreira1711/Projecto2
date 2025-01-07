@@ -27,7 +27,7 @@ const DeleteAppointment = () => {
                 return;
             }
 
-            const response2 = await axios.delete(`http://localhost:8000/appointments/${iDAppointment}`);
+            const response2 = await axios.delete(`https://backend-kpx0.onrender.com/appointments/${iDAppointment}`);
             if (response2.status === 200) {
                 const tx = await contract.removeAppointmentById(iDAppointment); // Usar `id` como número simple
                 await tx.wait();

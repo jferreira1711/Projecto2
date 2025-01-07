@@ -6,10 +6,10 @@ import { useParams } from "react-router-dom";
 import Sidebar from '../../Sidebar.js';
 
 
-const URI = "http://localhost:8000/prescriptions/";
-const URI2 = "http://localhost:8000/medicalreports/";
-const URI3 = "http://localhost:8000/patients/";
-const URI4 = "http://localhost:8000/doctors/";
+const URI = "https://backend-kpx0.onrender.com/prescriptions/";
+const URI2 = "https://backend-kpx0.onrender.com/medicalreports/";
+const URI3 = "https://backend-kpx0.onrender.com/patients/";
+const URI4 = "https://backend-kpx0.onrender.com/doctors/";
 
 const MedicalPrescription = () => {
     const { id } = useParams(); // Extract the id parameter from the URL

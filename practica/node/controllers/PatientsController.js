@@ -9,11 +9,17 @@ import bcrypt from 'bcrypt'
 export const getallPatients = async (req, res) => {
     try {
         const patients = await PatientsModel.findAll();
+        if (!patients) {
+            // Si no se encuentra el paciente, devolver error 404
+            return res.status(404).json({ message: "No hay pacientes" });
+        }
         res.json(patients);
     } catch (error) {
-        res.json({ message: "Error getting patients!" });
+        console.error("Error getting patients:", error); // Agregar log detallado
+        res.status(500).json({ message: "Error getting patients!", error: error.message });
     }
 };
+
 
 //Mostrar un registro
 // Mostrar un registro

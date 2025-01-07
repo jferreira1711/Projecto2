@@ -5,7 +5,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { UserRound, Phone,Mail,Newspaper  } from 'lucide-react';
 
-const URI = 'http://localhost:8000/doctors/'
+const URI = 'https://backend-kpx0.onrender.com/doctors/'
 
 const ShowDoctorInfo = () => {
     const { id } = useParams(); // Extract the id parameter from the URL

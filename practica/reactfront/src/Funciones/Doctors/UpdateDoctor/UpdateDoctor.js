@@ -7,7 +7,7 @@ import { useWallet } from "../../../WalletProvider.js";
 import { ethers } from "ethers";
 import { UserRound, Phone,Mail,Newspaper  } from 'lucide-react';
 
-const URI = 'http://localhost:8000/doctors/'
+const URI = 'https://backend-kpx0.onrender.com/doctors/'
 
 const UpdateDoctor = () => {
     const { id } = useParams(); // Extract the id parameter from the URL

@@ -36,7 +36,7 @@ const AddAppointment = () => {
                 alert("Only administrative staff is allowed.");
                 return;
             }
-            const response = await axios.post("http://localhost:8000/appointments/", appointmentData);
+            const response = await axios.post("https://backend-kpx0.onrender.com/appointments/", appointmentData);
             console.log(response.status); // Verifica el código de estado
             if (response.status === 200 || response.status === 201) {
                 // Serializar la información del paciente y crear el hash

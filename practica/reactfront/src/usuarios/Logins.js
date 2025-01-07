@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Form, Input, Button } from 'antd';
 import './Logins.css'
 
-const URI = 'http://localhost:8000/usuarios/login';
+const URI = 'https://backend-kpx0.onrender.com/usuarios/login';
 
 const Login = () => {
     const [username, setUsername] = useState('');

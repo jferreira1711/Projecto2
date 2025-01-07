@@ -6,7 +6,7 @@ import Sidebar from '../../Sidebar';
 import { useParams } from "react-router-dom";
 
 
-const URI2 = 'http://localhost:8000/medicalreports/'
+const URI2 = 'https://backend-kpx0.onrender.com/medicalreports/'
 
 
 const IdDoctorMedicalReport = () => {

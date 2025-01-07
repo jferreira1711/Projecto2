@@ -16,7 +16,7 @@ const IdDoctor = () => {
 
         try {
             // Llamada al backend para comprobar si el ID existe
-            const response = await axios.get(`http://localhost:8000/doctors/${idDoctor}`);
+            const response = await axios.get(`https://backend-kpx0.onrender.com/doctors/${idDoctor}`);
             if (response.data) {
                 // Si el paciente existe, redirige
                 navigate(`/updateDoctor/${idDoctor}`);

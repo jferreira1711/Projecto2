@@ -3,21 +3,27 @@ import Sidebar from "../../Sidebar";
 import { useNavigate } from "react-router-dom";
 import { KeyRound } from 'lucide-react';
 import axios from 'axios'; // Importar Axios
+import { useWallet } from "../../WalletProvider.js";
 
 const IdDoctorMedicalReport = () => {
 
     const [idDoctor, setIdDoctor] = useState("");
     const navigate = useNavigate();
+    const { doctorStaffGroup} = useWallet();
     
     const handleSubmit = async () => {
         if (!idDoctor) {
-            alert("Por favor ingrese un ID de un doctor válido");
+            alert("Please enter a valid doctor ID");
+            return;
+        }
+        if (!doctorStaffGroup) {
+            alert("Only doctorstaff is allowed.");
             return;
         }
 
         try {
             // Llamada al backend para comprobar si el ID existe
-            const response = await axios.get(`http://localhost:8000/doctors/${idDoctor}`);
+            const response = await axios.get(`https://backend-kpx0.onrender.com/doctors/${idDoctor}`);
             if (response.data) {
                 // Si el paciente existe, redirige
                 navigate(`/doctorAccount/${idDoctor}`);
